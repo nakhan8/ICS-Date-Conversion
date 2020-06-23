@@ -1,6 +1,6 @@
 # ics-date-converter
 
-calendar integrations with SnapHabit. "ICS" is a calendar format we'll need to become more familiar with.
+calendar integrations with SnapHabit. "ICS" is a calendar format 
 
 ### how to run program
 1. Clone repo: git clone 
