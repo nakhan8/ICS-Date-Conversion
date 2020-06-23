@@ -12,4 +12,10 @@ calendar integrations with SnapHabit. "ICS" is a calendar format
 4. npm start 
 
 5. localhost:8008
+
+6. Select ics file
+
+7. Select new date
+
+8. Download new file
  
