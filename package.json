@@ -1,0 +1,28 @@
+{
+  "name": "converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "formidable": "^1.2.2",
+    "ical-generator": "^1.11.0",
+    "ics": "^2.22.1",
+    "moment-timezone": "^0.5.31",
+    "node-ical": "^0.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}
