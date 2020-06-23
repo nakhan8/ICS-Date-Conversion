@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url("calendar.jpg");
+        align-content: center;
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: 100% 100%;
+    }
+    form {
+      display: inline-block;
+    }
+  
+
+    label {
+  display: flex;
+  align-items: center;
+}
+
+span::after {
+  padding-left: 5px;
+}
+
+input:invalid + span::after {
+  content: '✖';
+  color: red;
+}
+
+input:valid+span::after {
+  content: '✓';
+  color: green;
+}
+
+input:invalid {
+  background-color: pink;
+}
+
+.button {
+  background-color: orange; /* Green */
+  color: blue;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+
+</style>
+<body>
+  <div class="content">
+
+    <h1>ICS Date Conversion</h1>
+    <!-- <input id="ics-file" type="file" />  -->
+    <form method="POST" action="/submit-form" enctype="multipart/form-data">
+        <p>UPLOAD .ics FILE </p>
+        <input type="file" name="document" id="file" accept=".ics" required/>
+        <label>
+            NEW DATE: 
+	    <input type="date" id="startDate" name="startDate">
+            <span class="validity"></span>
+        </label>
+        <input type="submit" class="button" id="submit" />
+
+    </form>
+  </div>
+</body>
+<script type="text/javascript">
+    var button = document.getElementById("submit")
+    var file = document.getElementById("file")
+    var datePicker = document.getElementById('startDate');
+
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    if (month < 10) month = "0" + month;    
+    if (day < 10) day = "0" + day;
+    var today = year + "-" + month + "-" + day;
+    var max = (year+10) + "-" + month + "-" + day
+
+    datePicker.value = today;
+    datePicker.min = today;
+    datePicker.max = max
+</script>
+
+</html>
